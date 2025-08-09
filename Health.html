@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Habit Tracker App</title>
+  <link rel="stylesheet" href="Health.css">
+  <!-- Chart.js for progress visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Habit Tracker</h1>
+    <button id="addHabitBtn">+ Add New Habit</button>
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+    </select>
+    <ul id="habitList"></ul>
+    <div id="reportsSection"></div>
+    <canvas id="progressChart" width="640" height="210"></canvas>
+  </div>
+  <!-- Add Habit Modal -->
+  <div id="habitModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <form id="habitForm">
+        <input type="text" id="habitName" placeholder="Habit name" required>
+        <input type="text" id="habitCategory" placeholder="Category" required>
+        <button type="submit">Add Habit</button>
+      </form>
+    </div>
+  </div>
+  <script src="Health.js"></script>
+</body>
+</html>
